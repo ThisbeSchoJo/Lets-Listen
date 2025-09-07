@@ -1,0 +1,216 @@
+/* ===== Base / Layout ===== */
+:root{
+  --nav-maxw: 1120px;
+  --nav-pad-x: 1.25rem;  /* ~20px */
+  --nav-pad-y: 1rem;     /* ~16px */
+  --brand-size: 64px;
+
+  --fg: #fff;
+  --fg-dim: #d9d9e3;
+  --bg: #0f0f12;
+  --bg-overlay: rgba(0,0,0,.8);
+  --line: #27272a;
+
+  --accent: #4959e4;
+  --accent-hover: #3e4fd8;
+
+  --underline-h: 2px;
+  --transition: 200ms ease;
+}
+
+/* Remove the white focus ring WP adds; keep accessibility with a subtle shadow */
+.focus-reset{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Container */
+.navbar{
+  width: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  position: relative;
+}
+
+.nav-inner{
+  width: 100%;
+  max-width: var(--nav-maxw);
+  margin: 0 auto;
+  padding: var(--nav-pad-y) clamp(1rem, 3vw, var(--nav-pad-x));
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Left: Brand */
+.brand-logo{
+  width: var(--brand-size);
+  height: var(--brand-size);
+  border-radius: .75rem;
+  display: block;
+}
+
+/* Center: Links (desktop) */
+.nav-links{
+  flex: 1 1 auto;
+  display: none; /* mobile hidden by default */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link{
+  position: relative;
+  display: inline-block;
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 1.0625rem; /* ~17px */
+  padding: .25rem .5rem;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/* Underline effect using pseudo-element (like Tailwind `after:` trick) */
+.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  bottom: 0;
+  height: var(--underline-h);
+  width: 100%;
+  background: var(--fg);
+  border-radius: 2px;
+  transition: transform 300ms ease;
+  transform-origin: left;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.active::after{
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Right: Donate (desktop) */
+.donate-wrap{
+  flex: 0 0 auto;
+}
+
+.donate-btn{
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.donate-btn:hover{
+  transform: translateY(-1px);
+  background: var(--accent-hover);
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+
+.donate-btn:active{
+  transform: translateY(0) scale(.97);
+}
+
+/* Hamburger (mobile) */
+.hamburger{
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  color: var(--fg);
+  padding: .25rem;
+  cursor: pointer;
+}
+
+.icon-24{ width: 32px; height: 32px; }
+
+/* Mobile overlay menu */
+.mobile-overlay{
+  position: fixed;
+  inset: 0;
+  background: var(--bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.mobile-menu{
+  position: relative;
+  width: min(92vw, 560px);
+  background: #141416;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: clamp(1rem, 3vw, 2rem);
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+
+.close-btn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.mobile-links{
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.mobile-link{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.375rem; /* ~22px */
+  font-weight: 700;
+  padding: .5rem .75rem;
+  border-radius: 10px;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.mobile-link:hover,
+.mobile-link:focus{
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+}
+
+.mobile-donate{
+  display: inline-block;
+  margin-top: .5rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  padding: .6rem 1.25rem;
+  border-radius: 999px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.mobile-donate:hover{ background: var(--accent-hover); transform: translateY(-1px); }
+.mobile-donate:active{ transform: scale(.98); }
+
+/* ===== Responsive helpers ===== */
+.desktop-show{ display: none; }
+.desktop-hide{ display: inline-flex; }
+
+@media (min-width: 1200px){ /* ~Tailwind's "xl"ish */
+  .desktop-show{ display: flex; }
+  .desktop-hide{ display: none; }
+}
+
+/* Optional: subtle bottom border for the whole bar */
+.navbar{ border-bottom: 1px solid var(--line); }
