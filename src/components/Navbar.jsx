@@ -1,18 +1,89 @@
-import React from 'react';
-import './Navbar.css';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "../styles/Navbar.css";
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">🎧</div>
-      <ul className="navbar-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Get Involved</a></li>
-        <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Donate</a></li>
-      </ul>
-    </nav>
+    <header className="navbar">
+      <div className="navbar-content">
+        <div className="navbar-logo">
+          <div className="logo-icon">🎧</div>
+          <span className="logo-text">Let's Listen Project</span>
+        </div>
+
+        <nav className="navbar-nav">
+          <Link
+            to="/"
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className={`nav-link ${
+              location.pathname === "/about" ? "active" : ""
+            }`}
+          >
+            About
+          </Link>
+          <Link
+            to="/listening-session"
+            className={`nav-link ${
+              location.pathname === "/listening-session" ? "active" : ""
+            }`}
+          >
+            Listening Session
+          </Link>
+          <Link
+            to="/mental-health-awareness"
+            className={`nav-link ${
+              location.pathname === "/mental-health-awareness" ? "active" : ""
+            }`}
+          >
+            Mental Health Awareness
+          </Link>
+          <Link
+            to="/get-involved"
+            className={`nav-link ${
+              location.pathname === "/get-involved" ? "active" : ""
+            }`}
+          >
+            Get Involved
+          </Link>
+          <Link
+            to="/donate"
+            className={`nav-link ${
+              location.pathname === "/donate" ? "active" : ""
+            }`}
+          >
+            Donate
+          </Link>
+        </nav>
+
+        <div className="navbar-social">
+          <span className="social-text">Connect with Us</span>
+          <a
+            href="https://instagram.com/letslistenproject"
+            className="social-icon instagram instagram-link"
+            title="Follow us on Instagram"
+            aria-label="Follow us on Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              className="instagram-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
   );
 }

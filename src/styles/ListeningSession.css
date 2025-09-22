@@ -1,0 +1,297 @@
+/* Import Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.listening-session-page {
+  font-family: "Inter", sans-serif;
+  background-color: #170566;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Hero Section Styles */
+.listening-hero-section {
+  padding: 4rem 2rem;
+  background-color: #170566;
+}
+
+.listening-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.listening-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.listening-hero-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.listening-hero-description {
+  color: white;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.signup-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-button {
+  background-color: white;
+  color: #170566;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.listening-hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+/* Image Placeholder Styles */
+.image-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.placeholder-text {
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* What to Expect Section */
+.what-to-expect-section {
+  padding: 4rem 2rem;
+  background-color: #170566;
+}
+
+.what-to-expect-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.expectations-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.expectation-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.expectation-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.expectation-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  color: #170566;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 1rem auto;
+}
+
+.expectation-item h3 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.expectation-item p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  padding: 4rem 2rem;
+  background-color: #170566;
+}
+
+.how-it-works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-it-works-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.how-it-works-text .section-title {
+  margin-bottom: 2rem;
+}
+
+.steps-list {
+  margin-bottom: 2rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #170566;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Button Styles */
+.more-info-btn {
+  background-color: white;
+  color: #170566;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.more-info-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .listening-hero-content,
+  .how-it-works-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .expectations-content {
+    grid-template-columns: 1fr;
+  }
+
+  .listening-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .signup-button-container {
+    justify-content: center;
+  }
+
+  .listening-hero-image {
+    order: -1; /* Move image above text on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .listening-hero-section,
+  .what-to-expect-section,
+  .how-it-works-section {
+    padding: 2rem 1rem;
+  }
+
+  .listening-hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+
+  .expectation-item {
+    padding: 1.5rem;
+  }
+
+  .step-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}

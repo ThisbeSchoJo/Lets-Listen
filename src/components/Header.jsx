@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./Header.css";
+import "../styles/Header.css";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -44,9 +44,18 @@ export default function Header() {
           aria-label="Open menu"
           onClick={handleMenuToggle}
         >
-          <svg className="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            className="icon-24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
 
@@ -70,7 +79,11 @@ export default function Header() {
 
         {/* Donate (desktop) */}
         <div className="donate-wrap desktop-show">
-          <Link to="/donate" className="donate-btn focus-reset" aria-label="Donate">
+          <Link
+            to="/donate"
+            className="donate-btn focus-reset"
+            aria-label="Donate"
+          >
             Donate
           </Link>
         </div>
@@ -85,9 +98,18 @@ export default function Header() {
               aria-label="Close menu"
               onClick={handleMenuClose}
             >
-              <svg className="icon-24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="icon-24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
 
@@ -104,7 +126,11 @@ export default function Header() {
                 </li>
               ))}
               <li>
-                <Link to="/donate" className="mobile-donate focus-reset" onClick={handleMenuClose}>
+                <Link
+                  to="/donate"
+                  className="mobile-donate focus-reset"
+                  onClick={handleMenuClose}
+                >
                   Donate
                 </Link>
               </li>

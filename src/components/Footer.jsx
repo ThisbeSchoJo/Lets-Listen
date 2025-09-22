@@ -1,43 +1,52 @@
 import React from "react";
-import "./Footer.css";
+import "../styles/Footer.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-section">
-        <div className="footer-logo">🎧</div>
-        <ul className="footer-links">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Get Involved</a>
-          </li>
-          <li>
-            <a href="#">Sign Up</a>
-          </li>
-          <li>
-            <a href="#">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-      <div className="footer-section social-media">
-        <div className="footer-icons">
-          <a href="#" aria-label="Facebook">
-            &#xf09a;
-          </a>
-          <a href="#" aria-label="Instagram">
-            &#xf16d;
-          </a>
-          <a href="#" aria-label="Twitter">
-            &#xf099;
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            &#xf0e1;
-          </a>
+      <div className="footer-content">
+        <div className="footer-logo-section">
+          <div className="footer-logo">
+            <div className="footer-logo-icon">🎧</div>
+            <span className="footer-logo-text">Let's Listen Project</span>
+          </div>
+          <p className="footer-tagline">
+            <em>Everyone has a story - We are here to listen.</em>
+          </p>
+        </div>
+
+        <div className="footer-links-section">
+          <h4>Quick Links</h4>
+          <div className="footer-links-grid">
+            <a href="/">Home</a>
+            <a href="/listening-session">Listening Session</a>
+            <a href="/donate">Donate</a>
+            <a href="/mental-health-awareness">Mental Health Awareness</a>
+          </div>
+        </div>
+
+        <div className="footer-social-section">
+          <h4>Connect with Us</h4>
+          <div className="footer-social-icon-container">
+            <a
+              href="https://instagram.com/letslistenproject"
+              className="footer-social-icon instagram-link"
+              title="Follow us on Instagram"
+              aria-label="Follow us on Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                className="instagram-icon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="24"
+                height="24"
+              >
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

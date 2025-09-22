@@ -1,0 +1,286 @@
+/* Import Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+.about-page {
+  font-family: "Inter", sans-serif;
+  background-color: #170566;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Mission and Philosophy Section */
+.mission-philosophy-section {
+  padding: 4rem 2rem;
+}
+
+.mission-philosophy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.mission-section,
+.philosophy-section {
+  width: 100%;
+}
+
+.mission-content,
+.philosophy-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.philosophy-content {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Section Title Styles */
+.section-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* Content Text Styles */
+.mission-text p,
+.philosophy-text p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Image Placeholder Styles */
+.image-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.placeholder-text {
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Button Styles */
+.more-info-btn {
+  background-color: white;
+  color: #170566;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  display: block;
+  margin: 0 auto;
+}
+
+.more-info-btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* Board Members Section Styles */
+.board-members-section {
+  background-color: #170566;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.board-members-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.board-members-header {
+  margin-bottom: 3rem;
+}
+
+.board-members-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.board-members-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.board-member-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+.board-member-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.board-member-photo {
+  width: 200px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  overflow: hidden;
+}
+
+.placeholder-photo {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  opacity: 0.7;
+}
+
+.board-member-photo .photo-placeholder {
+  text-align: center;
+}
+
+.board-member-name {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.board-member-chevron {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.board-member-card.expanded .board-member-chevron {
+  transform: rotate(180deg);
+}
+
+.board-member-card.expanded .board-member-details {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.board-member-details {
+  display: none;
+}
+
+.board-member-position {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.board-member-description {
+  color: white;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.board-member-description p {
+  margin: 0;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .board-members-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .board-members-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-content,
+  .philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .board-members-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .section-title,
+  .board-members-title {
+    font-size: 2rem;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .board-members-grid {
+    gap: 1rem;
+  }
+
+  .board-member-card {
+    padding: 1rem;
+    max-width: 250px;
+    min-width: 180px;
+  }
+
+  .board-member-photo {
+    width: 160px;
+    height: 120px;
+  }
+}
