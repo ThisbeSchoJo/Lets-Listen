@@ -30,10 +30,16 @@
 }
 
 .footer-logo-icon {
-  font-size: 1.8rem;
+  width: 30px;
+  height: 30px;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #170566;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 4px;
   margin-right: 0.5rem;
 }
 
